@@ -1,5 +1,7 @@
 @import '../../styles/mixins';
 .asideBar {
+  display: flex;
+  flex-direction: column;
   position: fixed;
   right: 0;
   max-width: 450px;
