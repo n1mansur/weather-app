@@ -1,0 +1,55 @@
+@import './styles/_nullStyle.scss';
+@import './styles/_mixins.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@400;500;600&family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  font-family: 'Urbanist', sans-serif;
+}
+.container {
+  max-width: 1296px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  z-index: 10;
+  @include md {
+    padding: 10px;
+  }
+}
+.loadingBOX {
+  width: 100%;
+  height: 100vh;
+  padding: 0 0 0 200px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  font-size: 150px;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 137, 200, 1) 0%,
+    rgba(166, 202, 224, 1) 100%
+  );
+  z-index: 100;
+}
+// air-balloon
+.air-balloon {
+  position: absolute;
+  top: 5%;
+  left: 30%;
+  width: 325px;
+  height: 468px;
+  z-index: 1;
+  @include md {
+    left: 10%;
+  }
+  @media (max-width: 400px) {
+    left: 0%;
+  }
+}
+.waether-rainy {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

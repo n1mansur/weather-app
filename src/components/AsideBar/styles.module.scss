@@ -1,0 +1,28 @@
+@import '../../styles/mixins';
+.asideBar {
+  position: fixed;
+  right: 0;
+  max-width: 450px;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 59, 59, 0.534);
+  z-index: 15;
+  @include md {
+    max-width: none !important;
+    width: 100%;
+    //min-height: 50%;
+    position: static;
+  }
+  @media (max-width: 1050px) {
+    max-width: 400px;
+  }
+  @media (max-width: 1000px) {
+    max-width: 350px;
+  }
+  @media (max-width: 950px) {
+    max-width: 300px;
+  }
+  @media (max-width: 900px) {
+    max-width: 250px;
+  }
+}

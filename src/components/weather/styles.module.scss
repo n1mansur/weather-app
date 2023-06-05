@@ -1,0 +1,94 @@
+@import '../../styles/mixins';
+.weather {
+  width: 60%;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 190px auto 100px;
+  grid-template-rows: repeat(4, 30px);
+  @include md {
+    grid-template-columns: 180px auto 80px;
+    grid-template-rows: repeat(4, 20px);
+  }
+  @include sm {
+    grid-template-columns: 100px auto 40px;
+    grid-template-rows: repeat(4, 10px);
+  }
+  @media (max-width: 480px) {
+    width: 70%;
+  }
+  @media (max-width: 420px) {
+    width: 80%;
+  }
+  @media (max-width: 375px) {
+    width: 90%;
+  }
+  @media (max-width: 340px) {
+    width: 100%;
+  }
+  .degree {
+    grid-column: 1/2;
+    grid-row: 1/5;
+    font-size: 120px;
+    font-weight: 600;
+    @include md {
+      font-size: 100px;
+      font-weight: 500;
+    }
+    @include sm {
+      font-size: 50px;
+      font-weight: 400;
+    }
+  }
+  .city {
+    grid-row: 1/4;
+    grid-column: 2/3;
+    font-size: 90px;
+    @include md {
+      font-size: 50px;
+    }
+    @include sm {
+      font-size: 30px;
+    }
+  }
+  .date {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    font-size: 27px;
+    @include md {
+      font-size: 14px;
+    }
+    @include sm {
+      font-size: 10px;
+    }
+  }
+  .details {
+    grid-column: 3/4;
+    grid-row: 1/5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    & > i {
+      font-size: 70px;
+    }
+    & > span {
+      font-size: 30px;
+    }
+    @include md {
+      & > i {
+        font-size: 50px;
+      }
+      & > span {
+        font-size: 20px;
+      }
+    }
+    @include sm {
+      & > i {
+        font-size: 30px;
+      }
+      & > span {
+        font-size: 10px;
+      }
+    }
+  }
+}
