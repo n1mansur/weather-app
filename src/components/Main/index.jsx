@@ -8,10 +8,15 @@ export default function Main() {
   const [load, setLoad] = useState(false)
   const dataFromRedux = useSelector((data) => data)
   //console.log(dataFromRedux, 'main')
+  //console.log(dataFromRedux.rain)
   return (
     <>
       <div className={`${styles.main} ${styles.goodWeather}`}>
-        <img className="air-balloon" src="/images/air_balloon.png" alt="shar" />
+        <img
+          className={`air-balloon ${dataFromRedux.rain ? 'air' : ''}`}
+          src="/images/air_balloon.png"
+          alt="shar"
+        />
         {dataFromRedux.rain ? (
           <img className="waether-rainy" src="/images/rainy.png" alt="shar" />
         ) : (
