@@ -4,6 +4,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 /*bloklarning width ni o`zgarishini verstka uchun qulay qilib beradi*/
 *,
 *:before,

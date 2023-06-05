@@ -32,6 +32,10 @@
     rgba(166, 202, 224, 1) 100%
   );
   z-index: 100;
+  @include md {
+    padding: 0 0 0 20px;
+    font-size: 50px;
+  }
 }
 // air-balloon
 .air-balloon {
