@@ -19,16 +19,20 @@ export default function Cities({ setLoad, city }) {
       await get(city)
         .then((res) => {
           setValue(res)
-          //console.log(res, 'res')
+          console.log(res, 'res')
           return res
         })
-        .catch(() => value)
+        .catch(() => {
+          alert('wrong country name')
+          return value
+        })
         .finally(() =>
           setTimeout(() => {
             setLoad(false)
           }, 300)
         )
     ).data
+    //console.log(data)
     const newData = {
       wind: data.wind,
       rain: data.rain,

@@ -12,7 +12,8 @@
     color: #fff;
   }
   @include md {
-    display: none;
+    //display: none;
+    //height: none;
   }
 }
 .card {

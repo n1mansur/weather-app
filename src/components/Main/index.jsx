@@ -25,7 +25,7 @@ export default function Main() {
 
         <div className="container">
           {load ? <div className="loadingBOX">LOADING...</div> : <></>}
-          <div className={styles.section}>
+          <div className={styles.section} id="main__section">
             <h2 className={styles.title}>the.weather</h2>
             <Weather />
           </div>
