@@ -24,7 +24,7 @@ export default function Main() {
         )}
 
         <div className="container">
-          {true ? (
+          {load ? (
             <div className="loadingBOX">
               <span>LOADING...</span>
             </div>
